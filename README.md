@@ -2,7 +2,7 @@
 
 IMPORTANT : Deux personnes ont travaillés sur ce projet. Je ne suis pas l'auteur de tout le code.
 
-Réalisé par : Martinez Morganne et Bougouin Marius (Trinôme 6) 
+Réalisé par : Martinez Morganne et Bougouin Marius 
 ==========
 
 Projet Web 3ème année ISEN de Brest
