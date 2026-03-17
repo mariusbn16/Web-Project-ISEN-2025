@@ -68,5 +68,8 @@ STRUCTURE DU PROJET
     - isen.png : Logo ou image liée à l’interface
     - image.png : Illustration supplémentaire
 
+/notebook_ia/
+   Notebook et données utilisés pour generer les modèles du dossier /script
+
 
 
