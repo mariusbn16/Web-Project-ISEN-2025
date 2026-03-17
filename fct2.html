@@ -1,0 +1,177 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Header -->
+     
+    <header>
+        <div id="top"></div>
+        <div id="logo">
+            <img src="img/isen.png" alt="Logo Isen">
+        </div>
+        <div id="header-title">
+            <h1>Navigation des Navires</h1>
+            <h2>dans le Golfe du Mexique</h2>
+        </div>
+        <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="fct2.html" class="active">Ajouter un bateau</a></li>
+            <li><a href="fct3.html">Visualisation</a></li>
+            <li><a href="fct4.html">Prédictions des Clusters</a></li>
+        </ul>
+    </nav>
+    </header>
+
+    <!-- Ajout bateau -->
+
+    <div>
+        <h3>Ajouter un point de données</h3>
+        <p>Saisissez les informations du bateau et de sa position</p> 
+    </div>
+
+    <form id="vessel-data">
+        <div class="form-section">
+            <h4>Identification du bateau</h4>
+
+            <div class="form-row">
+                
+                <div class="form-group">
+                    <label for="mmsi">MMSI *</label>
+                    <input type="text" id="mmsi" placeholder="Ex: 274589426" required>
+                    <div class="helper-text">Identifiant maritime unique</div> 
+                </div>
+
+                <div class="form-group">
+                    <label for="vessel_name">Nom du bateau *</label>
+                    <input type="text" id="vessel_name" placeholder="Ex: STOLT LOTUS" required>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="form-section">
+            <h4>Horodatage</h4>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="date">Date *</label>
+                    <input type="text" id="date" placeholder="Ex: 2023-09-25" required>
+                </div>
+                <div class="form-group">
+                    <label for="time">Heure *</label>
+                    <input type="text" id="time" placeholder="Ex: 12:45:00" required>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="form-section">
+            <h4>Position géographique</h4>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="lat">Latitude *</label>
+                    <input type="text" id="lat" placeholder="Ex: 29.0709" required>
+                    <div class="helper-text">Degrés decimaux</div>
+                </div>
+                <div class="form-group">
+                    <label for="lon">Longitude *</label>
+                    <input type="text" id="lon" placeholder="Ex: -89.7628" required>
+                    <div class="helper-text">Degrés decimaux</div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="form-section">
+            <h4>Données de navigation</h4>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="sog">Vitesse *</label>
+                    <input type="text" id="sog" placeholder="Ex: 13.4" required>
+                    <div class="helper-text">Vitesse par rapport au fond</div>
+                </div>
+                <div class="form-group">
+                    <label for="cog">Cap (COG) *</label>
+                    <input type="text" id="cog" placeholder="Ex: 227.6" required>
+                    <div class="helper-text">Cap par rapport au fond</div>
+                </div>
+                <div class="form-group">
+                    <label for="heading">Cap réel *</label>
+                    <input type="text" id="heading" placeholder="Ex: 227" required>
+                    <div class="helper-text">Cap réel du navire</div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="form-section">
+            <h4>Etat du bateau</h4>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="etat">Etat *</label>
+                    <select id="etat">
+                        <option value="">Choix Etat</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="form-section">
+            <h4>Dimensions</h4>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="length">Longueur *</label>
+                    <input type="text" id="length" placeholder="Ex: 183" required>
+                </div>
+                <div class="form-group">
+                    <label for="width">Largeur *</label>
+                    <input type="text" id="width" placeholder="Ex: 28" required>
+                </div>
+                <div class="form-group">
+                    <label for="draft">Tirant d'eau *</label>
+                    <input type="text" id="draft" placeholder="Ex: 10" required>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="form-section">
+            <div class="form-row">
+                <div class="form-group">
+                    <button type="submit">Enregistrer le point de données</button>
+                    <div class="helper-text">* Champs obligatoires</div>
+                </div>
+                <div class="form-group">
+                    <button type="reset">Annuler</button>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+    </form>
+
+    <!-- Footer -->
+
+    <footer>
+        <p>Projet Web A3 2025</p>
+        <p>Bougouin Marius - Martinez Morganne - Akpo Okaté</p>
+        <p>Groupe 1 - Trinôme 6</p>
+    </footer>
+    <script src="js/fct2.js" defer></script>
+</body>
+</html> 

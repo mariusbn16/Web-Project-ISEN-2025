@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prédictions Type & Trajectoires</title>
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+    <header>
+        <div id="top"></div>
+        <div id="logo">
+            <img src="img/isen.png" alt="Logo ISEN">
+        </div>
+        <div id="header-title">
+            <h1>Navigation des Navires</h1>
+            <h2>dans le Golfe du Mexique</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="fct2.html">Ajouter un bateau</a></li>
+                <li><a href="fct3.html">Visualisation</a></li>
+                <li><a href="fct4.html">Prédictions des Clusters</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="prediction-grid">
+            <!-- Colonne de gauche : Prédiction Type -->
+            <div class="prediction-column">
+                <h2 class="section-title">Prédictions du Type de Navires</h2>
+
+                <div class="method-card">
+                    <h3>Méthode avec Random Forest :</h3>
+                    <div class="result-box" id="rf-result">-</div>
+                </div>
+
+                <div class="method-card">
+                    <h3>Méthode avec C-Support Vector Classification :</h3>
+                    <div class="result-box" id="svc-result">-</div>
+                </div>
+
+                <div class="method-card">
+                    <h3>Méthode avec Gradient Boosting :</h3>
+                    <div class="result-box" id="gb-result">-</div>
+                </div>
+
+                <div class="method-card">
+                    <h3>Méthode avec K-Nearest Neighbors :</h3>
+                    <div class="result-box" id="knn-result">-</div>
+                </div>
+            </div>
+
+            <!-- Colonne de droite : Prédiction Trajectoire -->
+            <div class="prediction-column">
+                <h2 class="section-title">Prédictions des Trajectoires</h2>
+
+                <div class="method-card">
+                    <h3>Méthode avec MultiOutputRegressor :</h3>
+                    <div class="result-box" id="mor-result">-</div>
+                </div>
+
+                <div class="method-card">
+                    <h3>Méthode avec Light GBM :</h3>
+                    <div class="result-box" id="lgbm-result">-</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <p>Projet Web A3 2025</p>
+        <p>Bougouin Marius - Martinez Morgane - Akpo Okaté</p>
+        <p>Groupe 1 - Trinôme 6</p>
+    </footer>
+
+    <script src="js/fct5.js"></script>
+</body>
+</html>

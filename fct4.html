@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prédiction des Clusters</title>
+    <script src="https://cdn.plot.ly/plotly-2.26.0.min.js"></script>
+
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+    <header>
+        <div id="top"></div>
+        <div id="logo">
+            <img src="img/isen.png" alt="Logo ISEN">
+        </div>
+        <div id="header-title">
+            <h1>Navigation des Navires</h1>
+            <h2>dans le Golfe du Mexique</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="fct2.html">Ajouter un bateau</a></li>
+                <li><a href="fct3.html">Visualisation</a></li>
+                <li><a href="fct4.html" class="active">Prédictions des Clusters</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<div class="container">
+    <h2 class="section-title">Prédiction des Clusters</h2>
+
+    <div class="cluster-layout">
+        <div class="map-wrapper">
+            <div id="map" class="map-container"></div>
+        </div>
+
+        <div class="legend">
+            <h3>Légende des Clusters</h3>
+            <ul>
+                <li><strong style="color: #FF0000">Cluster 0</strong> – Navires à faible vitesse : immobiles ou manœuvres lentes près des ports.</li>
+                <li><strong style="color: #00FF00">Cluster 1</strong> – Transit rapide vers l’ouest : cargos/tankers vers l’Atlantique ou les Amériques.</li>
+                <li><strong style="color: #0000FF">Cluster 2</strong> – Navires en attente : à l’ancre ou attente d’accostage, cap variable.</li>
+                <li><strong style="color: #FFFF00">Cluster 3</strong> – Navires en manœuvre : cap et heading changeants, mouvements de rotation.</li>
+                <li><strong style="color: #FF00FF">Cluster 4</strong> – Transit rapide vers l’est : similaires au cluster 1 mais vers Méditerranée/Asie.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+    <footer>
+        <p>Projet Web A3 2025</p>
+        <p>Bougouin Marius - Martinez Morganne - Akpo Okaté</p>
+        <p>Groupe 1 - Trinôme 6</p>
+    </footer>
+
+    <script src="js/fct4.js"></script>
+</body>
+</html>

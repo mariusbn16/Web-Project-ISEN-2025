@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualisation des Navires - Golfe du Mexique</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+        <!-- Chargement bibliothèques pour MapBox-->
+    <link href="https://api.mapbox.com/mapbox-gl-js/v3.12.0/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v3.12.0/mapbox-gl.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="top"></div>
+        <div id="logo">
+            <img src="img/isen.png" alt="Logo ISEN">
+        </div>
+        <div id="header-title">
+            <h1>Navigation des Navires</h1>
+            <h2>dans le Golfe du Mexique</h2>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="fct2.html">Ajouter un bateau</a></li>
+                <li><a href="fct3.html" class="active">Visualisation</a></li>
+                <li><a href="fct4.html">Prédictions des Clusters</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <div class="content-flex">
+            <div class="text-block">
+                <h3>Liste des Bateaux</h3>
+                <p>Données de la base de données</p>
+                <div class="table-container">
+                    <table id="ships-table">
+                        <thead>
+                            <tr>
+                                <th>MMSI</th>
+                                <th>Horodatage</th>
+                                <th>Latitude</th>
+                                <th>Longitude</th>
+                                <th>SOG</th>
+                                <th>COG</th>
+                                <th>Heading</th>
+                                <th>Nom</th>
+                                <th>État</th>
+                                <th>Longueur</th>
+                                <th>Largeur</th>
+                                <th>Profondeur</th> 
+                                <th>Select</th>
+                            </tr> 
+                        </thead>
+                        <tbody id="ships-data">
+                            <!-- Les données seront chargées ici par JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="prediction-buttons">
+                    <input type="button" value="Prédire les clusters" class="prediction-btn" id="prediction-cluster">
+                    <input type="button" value="Prédire le type" class="prediction-btn" id="prediction-type">
+                    <input type="button" value="Prédire la trajectoire" class="prediction-btn" id="prediction-trajectoire">
+                </div>
+            </div>
+
+            <div class="image-block">
+                <h3>Carte Maritime</h3>
+                <p>Trajectoires et positions</p>
+                <div id="map" class="map-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Projet Web A3 2025</p>
+        <p>Bougouin Marius - Martinez Morganne - Akpo Okaté</p>
+        <p>Groupe 1 - Trinôme 6</p>
+    </footer>
+
+    <script src="js/fct3.js"></script>
+</body>
+</html>

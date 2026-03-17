@@ -1,0 +1,469 @@
+/* Import de la police */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap');
+
+/* Styles de base */
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    color: #1F2937;
+    background-color: #FFFFFF;
+}
+
+/* Bandeau coloré en haut de page */
+#top {
+    background-color: #1E40AF;
+    height: 8px;
+    width: 100%;
+}
+
+/* En-tête principal */
+header {
+    background-color: #FFFFFF;
+    text-align: center;
+    padding: 20px 0 0 0;
+    position: relative;
+}
+
+/* Logo ISEN */
+#logo img {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    height: 80px;
+}
+
+/* Titre principal de l'en-tête */
+#header-title h1 {
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    color: #1E40AF;
+}
+
+/* Sous-titre de l'en-tête */
+#header-title h2 {
+    font-size: 34px;
+    font-weight: bold;
+    color: #1D4ED8;
+    margin: 0 0 15px 0;
+    position: relative;
+}
+
+/* Ligne de séparation sous le sous-titre */
+#header-title h2::after {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 5px;
+    background-color: #1E3A8A;
+    margin: 10px auto 15px;
+}
+
+/* Navigation principale */
+nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: #1E40AF;
+    list-style: none;
+}
+
+nav li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav a {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 4px solid transparent;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    border-bottom: 4px solid #93C5FD;
+}
+
+nav a.active {
+    color: #93C5FD;
+    border-bottom: 4px solid #93C5FD;
+}
+
+/* Conteneur principal */
+.container {
+    padding: 30px 40px;
+}
+
+/* Titres de section */
+.section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1F2937;
+}
+
+/* Sous-titres de section */
+.section-subtitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #1F2937;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+/* Disposition flexible pour contenu côte à côte */
+.content-flex {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Bloc image */
+.image-block {
+    flex: 1 1 45%;
+    max-width: 650px;
+}
+
+/* Image */
+.map-image {
+    width: 100%;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+/* Bloc texte */
+.text-block {
+    flex: 1 1 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* Titre H3 */
+.text-block h3,
+.image-block h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1F2937;
+    margin-bottom: 5px;
+}
+
+.text-block p,
+.image-block p {
+    font-size: 18px;
+    color:#1F2937 ;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+/* Liste des fonctionnalités */
+.features-list {
+    background-color: #F9FAFB;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 18px;
+    list-style-type: disc;
+}
+
+.features-list li {
+    margin-bottom: 2px;
+}
+
+/* Filtres */
+.filters {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.filters select,
+.filters input {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.filters button {
+    padding: 8px 16px;
+    background-color: #1E40AF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.filters button:hover {
+    background-color: #1E3A8A;
+}
+
+/* Conteneur du tableau */
+.table-container {
+    max-height: 600px;
+    overflow-y: auto;
+    margin-top: 20px;
+    background-color: #F9FAFB;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Tableau des navires */
+#ships-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+}
+
+#ships-table th,
+#ships-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#ships-table th {
+    background-color: #1E40AF;
+    color: white;
+    position: sticky;
+    top: 0;
+}
+
+#ships-table tr:hover {
+    background-color: #EFF6FF;
+}
+
+
+
+
+
+/* Carte */
+.map-container {
+    height: 80vh;/* prend 80% de la hauteur de l’écran */
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Boutons de prédiction */
+.prediction-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.prediction-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #1E40AF;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+}
+
+.prediction-btn:hover {
+    background-color: #1D4ED8;
+}
+
+.map-container {
+    height: 650px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .content-flex {
+        flex-direction: column;
+    }
+
+    .image-block, .text-block {
+        flex: 1 1 100%;
+    }
+
+    .prediction-buttons {
+        flex-direction: column;
+    }
+}
+
+/* Pied de page */
+footer {
+    background-color: #1F2937;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 18px;
+    margin-top: 40px;
+}
+
+
+
+/* pour la fonction 5*/
+/* Disposition en grille */
+.prediction-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.prediction-column {
+    background-color: #F9FAFB;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.method-card {
+    margin-bottom: 20px;
+}
+
+.result-box {
+    background: white;
+    border: 1px solid #E5E7EB;
+    padding: 15px;
+    border-radius: 4px;
+    min-height: 50px;
+    font-weight: bold;
+    color: #1E40AF;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .prediction-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.form-section {
+      margin-bottom: 2em;
+    }
+
+.form-section h2 {
+      margin-bottom: 1em;
+
+    }
+
+.form-row {
+      display: flex;
+      gap: 2em;
+
+    }
+
+.form-group {
+      flex: 1;
+    }
+
+.form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.3em;
+
+    }
+
+.form-group input {
+      width: 100%;
+      padding: 0.5em;
+      box-sizing: border-box;
+    }
+
+.form-group .helper-text {
+      font-size: 0.85em;
+      color: #666;
+      margin-top: 0.3em;
+    }
+
+
+/* Bouton de formulaire principal */
+.form-group button[type="submit"] {
+    background-color: #1E40AF;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Effet au survol */
+.form-group button[type="submit"]:hover {
+    background-color: #1D4ED8;
+
+}
+
+/* Bouton de réinitialisation */
+.form-group button[type="reset"] {
+    background-color: #6B7280;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* Effet au survol */
+.form-group button[type="reset"]:hover {
+    background-color: #4B5563;
+}
+
+
+
+/* Pour la carte mapbox*/
+/* ------ Carte ------ */
+
+#map {
+    height: 31rem;
+    width: 100%;
+}
+
+/* Style pour les marqueurs Mapbox */
+.marker {
+    background-color: blue;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Style pour les popups Mapbox */
+.mapboxgl-popup-content {
+    background: #fff;
+    padding: 0.6rem;
+    border-radius: 0.2rem;
+}
+
+.mapboxgl-popup-content h3 {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.mapboxgl-popup-content p {
+    margin: 0.3rem 0 0;
+    font-size: 0.75rem;
+}
+
+.marker {
+    border: 2px solid black;
+}
